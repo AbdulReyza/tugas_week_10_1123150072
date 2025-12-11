@@ -137,13 +137,13 @@ class _LoginDongState extends State<LoginDong> {
                 ),
 
                 SizedBox(height: 20,),
-              if(_error != null) ...[
-                Text(_error!, 
-                style: TextStyle(
-                    color: Colors.red,
-                  ), 
+                if (_error != null) ...[
+                const SizedBox(height: 10),
+                Text(
+                  _error!,
+                  style: const TextStyle(color: Colors.redAccent, fontSize: 14),
                 ),
-                SizedBox(height: 8,),
+                const SizedBox(height: 8),
               ],
               ElevatedButton(
                 onPressed: _isLoading ? null : _login, 
