@@ -57,20 +57,7 @@ class _LoginDongState extends State<LoginDong> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color.fromRGBO(64, 193, 199, 1),
-                Color.fromRGBO(0, 35, 53, 1),
-              ],
-            ),
-          ),
-        ),
+        backgroundColor: Color.fromRGBO(0, 35, 53, 1),
         centerTitle: true,
         title: const Text(
           "LOGIN",
@@ -85,8 +72,8 @@ class _LoginDongState extends State<LoginDong> {
           height: double.infinity,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
               colors: [
                 Color.fromRGBO(0, 35, 53, 1),
                 Color.fromRGBO(64, 193, 199, 1)
