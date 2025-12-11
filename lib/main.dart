@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:tugas_week_10_1123150072/firebase_options.dart';
 import 'package:tugas_week_10_1123150072/login/login.dart';
+import 'package:tugas_week_10_1123150072/pages/splash_screen_1.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,7 @@ class Rizz extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginDong()
+      home: SplashScreen1()
     );
   }
 }
