@@ -62,7 +62,30 @@ class _LoginDongState extends State<LoginDong> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10.0),
         child: Column(
-            children: [],
+            children: [
+              TextField(
+                controller: emailCtrl,
+                decoration: InputDecoration(labelText: 'Email'),
+              ),
+              TextField(
+                controller: passCtrl,
+                decoration: InputDecoration(labelText: 'Password'),
+                obscureText: true,
+              ),
+              SizedBox(height: 20,),
+            if(_error != null) ...[
+              Text(_error!, 
+              style: TextStyle(
+                  color: Colors.red,
+                ), 
+              ),
+              SizedBox(height: 8,),
+            ],
+            ElevatedButton(
+              onPressed: _isLoading ? null : _login, 
+              child: _isLoading ? CircularProgressIndicator() : Text('Log in')
+              )
+            ],
         ),
       ),
     );
