@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_week_10_1123150072/pages/splash_screen_3.dart';
+import 'package:tugas_week_10_1123150072/login/login.dart';
 
-class SplashScreen2 extends StatelessWidget {
-  const SplashScreen2({super.key});
+class SplashScreen3 extends StatelessWidget {
+  const SplashScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class SplashScreen2 extends StatelessWidget {
                       SizedBox(height: 80),
                       
                       Image.asset(
-                        'assets/images/1180w-600h_A_Z_Hero_2.jpg',
+                        'assets/images/io2_desktop_640x480_fb99b254-1.webp',
                         width: 300,
                         height: 300,
                       ),
@@ -47,7 +47,7 @@ class SplashScreen2 extends StatelessWidget {
                             onPressed: () {
                               Navigator.pushReplacement(context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SplashScreen3(),
+                                  builder: (context) => const LoginDong(),
                                 ),
                               );
                             },
@@ -72,7 +72,7 @@ class SplashScreen2 extends StatelessWidget {
                               child: Container(
                                 alignment: Alignment.center,
                                 child: Text(
-                                  'Next',
+                                  'GOOOOOO!!!',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
