@@ -99,13 +99,43 @@ class _LoginDongState extends State<LoginDong> {
               children: [
                 TextField(
                   controller: emailCtrl,
-                  decoration: InputDecoration(labelText: 'Email'),
+                  style: const TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    labelStyle: const TextStyle(color: Colors.white70),
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 10, 55, 75),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: Colors.white24),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: Colors.lightBlueAccent, width: 1.5),
+                    ),
+                  ),
                 ),
+                SizedBox(height: 15),
                 TextField(
                   controller: passCtrl,
-                  decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
+                  style: const TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    labelStyle: const TextStyle(color: Colors.white70),
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 10, 55, 75),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: Colors.white24),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: Colors.lightBlueAccent, width: 1.5),
+                    ),
+                  ),
                 ),
+
                 SizedBox(height: 20,),
               if(_error != null) ...[
                 Text(_error!, 
