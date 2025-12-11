@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_week_10_1123150072/pages/splash_screen_2.dart';
 
-class SplashScreen1 extends StatelessWidget {
-  const SplashScreen1({super.key});
+class SplashScreen2 extends StatelessWidget {
+  const SplashScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +31,12 @@ class SplashScreen1 extends StatelessWidget {
                       SizedBox(height: 80),
                       
                       Image.asset(
-                        'assets/images/disney.png',
-                        width: 150,
-                        height: 150,
+                        'assets/images/1180w-600h_A_Z_Hero_2.jpg',
+                        width: 300,
+                        height: 300,
                       ),
               
-                      SizedBox(height: 180),
+                      SizedBox(height: 20),
                       Padding(
                         padding:  EdgeInsets.all(10),
                         child: SizedBox(
@@ -45,11 +44,7 @@ class SplashScreen1 extends StatelessWidget {
                           height: 50,
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.pushReplacement(context,
-                                MaterialPageRoute(
-                                  builder: (context) => const SplashScreen2(),
-                                ),
-                          );
+                              // Navigator.pushReplacement(context, newRoute)
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
