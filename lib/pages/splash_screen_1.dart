@@ -7,14 +7,81 @@ class SplashScreen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
             appBar: AppBar(
+              backgroundColor: Color.fromRGBO(0, 35, 53, 1),
+              automaticallyImplyLeading: false,
             ),
-            body: SingleChildScrollView(
-              child: Container(
-                padding: const EdgeInsets.all(20.0),
-                child: const Column(
-                  children: [
-                    
-                  ],
+            body: Container(
+              width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color.fromRGBO(0, 35, 53, 1),
+                Color.fromRGBO(64, 193, 199, 1)
+              ],
+            ),
+          ),
+              child: SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 80),
+                      
+                      Image.asset(
+                        'assets/images/disney.png',
+                        width: 150,
+                        height: 150,
+                      ),
+              
+                      SizedBox(height: 180),
+                      Padding(
+                        padding:  EdgeInsets.all(10),
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: 50,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              // Navigator.pushReplacement(context, newRoute)
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                              padding: EdgeInsets.zero,
+                              backgroundColor: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                            ),
+                            child: Ink(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color(0xFF0077B6),
+                                    Color(0xFF00B4D8),
+                                  ],
+                                ),
+                                borderRadius: BorderRadius.all(Radius.circular(14)),
+                              ),
+                              child: Container(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  'Next',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+              
+                    ],
+                  ),
                 ),
               ),
             ),
