@@ -56,8 +56,21 @@ class _LoginDongState extends State<LoginDong> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(0, 35, 53, 1),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color.fromRGBO(64, 193, 199, 1),
+                Color.fromRGBO(0, 35, 53, 1),
+              ],
+            ),
+          ),
+        ),
         centerTitle: true,
         title: const Text(
           "LOGIN",
@@ -66,35 +79,48 @@ class _LoginDongState extends State<LoginDong> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Color.fromRGBO(0, 35, 53, 1),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-            children: [
-              TextField(
-                controller: emailCtrl,
-                decoration: InputDecoration(labelText: 'Email'),
-              ),
-              TextField(
-                controller: passCtrl,
-                decoration: InputDecoration(labelText: 'Password'),
-                obscureText: true,
-              ),
-              SizedBox(height: 20,),
-            if(_error != null) ...[
-              Text(_error!, 
-              style: TextStyle(
-                  color: Colors.red,
-                ), 
-              ),
-              SizedBox(height: 8,),
-            ],
-            ElevatedButton(
-              onPressed: _isLoading ? null : _login, 
-              child: _isLoading ? CircularProgressIndicator() : Text('Log in')
-              )
-            ],
+      body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Color.fromRGBO(0, 35, 53, 1),
+                Color.fromRGBO(64, 193, 199, 1)
+              ],
+            ),
+          ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+              children: [
+                TextField(
+                  controller: emailCtrl,
+                  decoration: InputDecoration(labelText: 'Email'),
+                ),
+                TextField(
+                  controller: passCtrl,
+                  decoration: InputDecoration(labelText: 'Password'),
+                  obscureText: true,
+                ),
+                SizedBox(height: 20,),
+              if(_error != null) ...[
+                Text(_error!, 
+                style: TextStyle(
+                    color: Colors.red,
+                  ), 
+                ),
+                SizedBox(height: 8,),
+              ],
+              ElevatedButton(
+                onPressed: _isLoading ? null : _login, 
+                child: _isLoading ? CircularProgressIndicator() : Text('Log in')
+                )
+              ],
+          ),
         ),
       ),
     );
