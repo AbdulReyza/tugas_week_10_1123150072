@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "711124263368",
+    "project_id": "projectreyza-3af6c",
+    "storage_bucket": "projectreyza-3af6c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711124263368:android:afcb34c69d3b941ee560fd",
+        "android_client_info": {
+          "package_name": "com.exam.reyza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdPeG0aC4aHflahFAaMuNKs0ldGm25kLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
