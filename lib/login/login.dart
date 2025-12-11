@@ -97,6 +97,7 @@ class _LoginDongState extends State<LoginDong> {
           padding: const EdgeInsets.all(10.0),
           child: Column(
               children: [
+                SizedBox(height: 20,),
                 TextField(
                   controller: emailCtrl,
                   style: const TextStyle(color: Colors.white),
@@ -184,6 +185,7 @@ class _LoginDongState extends State<LoginDong> {
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                     ),
