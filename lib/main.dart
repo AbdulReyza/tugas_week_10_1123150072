@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:tugas_week_10_1123150072/firebase_options.dart';
+import 'package:tugas_week_10_1123150072/login/login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,8 +15,8 @@ class Rizz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowMaterialGrid: false,
-      // home: ;
+      debugShowCheckedModeBanner: false,
+      home: LoginDong()
     );
   }
 }

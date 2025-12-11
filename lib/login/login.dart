@@ -56,8 +56,17 @@ class _LoginDongState extends State<LoginDong> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(0, 35, 53, 1),
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        centerTitle: true,
+        title: const Text(
+          "LOGIN",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(0, 35, 53, 1),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10.0),
